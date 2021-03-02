@@ -25,10 +25,10 @@ class TrelloAutomationUnittest(unittest.TestCase):
 
         print("Test started")
         if ConfigTestData.BROWSER == 'Chrome':
-            cls.driver = webdriver.Chrome(ConfigTestData.CHROME_EXECUTABLE_PATH)
+            cls.driver = webdriver.Chrome(executable_path=ConfigTestData.CHROME_EXECUTABLE_PATH)
 
         if ConfigTestData.BROWSER == 'Firefox':
-            cls.driver = webdriver.Firefox(ConfigTestData.FIREFOX_EXECUTABLE_PATH)
+            cls.driver = webdriver.Firefox(executable_path=ConfigTestData.FIREFOX_EXECUTABLE_PATH)
 
         cls.driver.maximize_window()
         cls.driver.get(ConfigTestData.URL)
